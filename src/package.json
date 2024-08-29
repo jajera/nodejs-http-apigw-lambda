@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-http-apigw-lambda",
+  "version": "1.0.0",
+  "main": "apps/httpApiGateway/httpApiGateway.mjs",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean; rsync -av --exclude='tests/' apps/ dist/ && cp package.json dist/",
+    "clean": "rm -Rf ./dist",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jajera/nodejs-http-apigw-lambda.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jajera/nodejs-http-apigw-lambda/issues"
+  },
+  "homepage": "https://github.com/jajera/nodejs-http-apigw-lambda#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.25.4",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}
